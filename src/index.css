@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --font-serif-romantic: 'Cormorant Garamond', Georgia, serif;
+    --font-handwriting: 'Great Vibes', cursive;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #2c1810;
+    background-color: #faf6f0;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-romantic {
+    font-family: var(--font-serif-romantic);
+  }
+
+  .font-script {
+    font-family: var(--font-handwriting);
+  }
+}
+
+/* Custom romantic animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(225, 29, 72, 0.25), 0 0 50px rgba(244, 63, 94, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(225, 29, 72, 0.45), 0 0 80px rgba(244, 63, 94, 0.25);
+  }
+}
+
+@keyframes equalizer {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Glassmorphism romantic accents */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(254, 205, 211, 0.5);
+}
+
+.glass-card-dark {
+  background: rgba(44, 24, 16, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(251, 113, 133, 0.25);
+}
+
+/* Custom sleek romantic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5ede4;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2a8b3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c85a5a;
+}
+

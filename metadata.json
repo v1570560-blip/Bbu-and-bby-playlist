@@ -1,0 +1,6 @@
+{
+  "name": "Bbu and bby - Love Song of Bbu and bby",
+  "description": "A private digital love memory book with romantic soundtrack player and love message wall for Bbu & bby.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
